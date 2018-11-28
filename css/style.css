@@ -1,0 +1,330 @@
+    /*Title for the game. Idea by Blake Johnson via CodePen. Made slight edits*/
+    .game-title {
+      font: 84px 'Arial Narrow', sans-serif;/* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
+      color: #fefefe;
+      text-transform: uppercase;
+      letter-spacing: -4px;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .game-title span {
+      position: relative;
+    }
+    .game-title span:before,
+    .game-title span:after {
+      content: '';
+      position: absolute;
+      border-width: 32px;/* makes a nice, big 64px square */
+      border-style: solid;
+      border-color: transparent;
+      height: 0;
+      z-index: 10;
+    }
+
+    /*Customisatios for "Rock" in the title*/
+    .game-title .first-word {
+      color: #FFF000;
+      margin-right: -38px;
+      transform: rotateY(180deg);/* using Prefix free */
+      display: inline-block;/* required for transform */
+      z-index: 10;/* stack 1st word on top */
+    }
+    .game-title .first-word:before {
+      right: -4px;/* would be left, but we flipped the word */
+      top: -9px;
+      border-top-color: #282828;/* match background color */
+      border-right-color: #282828;/* would be left, but we flipped the word */
+    }
+    .game-title .first-word:after {
+      left: 17px;/* would be right, but we flipped the word */
+      bottom: -15px;
+      border-bottom-color: #282828;
+      border-left-color: #282828;/* would be right, but we flipped the word */
+    }
+
+    /* Customisations for the "Paper Scissors" in the title*/
+    .game-title .last-words {
+      z-index: 0;/* stack 2nd word below */
+    }
+
+    .game-title .last-words:before {
+      left: -4px;
+      top: -6px;
+      border-top-color: #282828;
+      border-left-color: #282828;
+    }
+
+    .game-title .last-words:after {
+      right: -4px;
+      bottom: 4px;
+      border-bottom-color: #282828;
+      border-right-color: #282828;
+    }
+
+    /*Background Images and General Stylings for the whole page*/
+    body {
+      background-image: url("../images/bumblebee.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #FFF;
+    }
+    /*Buttons CSS*/
+  button {
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      background-color: #8b8e72;
+      color: black;
+      border: 2px solid #CBE216;
+    }
+
+  button:hover {
+      background-color: #CBE216;
+      color: white;
+    }
+
+    .wrapper {
+      margin-left: 140px;
+      margin-top: 30px;
+    }
+
+    .fa {
+      font-size: 60px;
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    i {
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 60px;
+      padding-top: 120px;
+    }
+
+    /*Result Table Customisations*/
+    .container.result {
+      text-align: center;
+      
+    }
+
+    .result tr {
+      font-size: 40px;
+      border-left: solid #fff000 1px;
+      border-top: solid #fff000 1px;
+    }
+
+    .result tbody {
+      background-color: #393D44;
+    }
+
+
+    /*Scoreboard Customisations*/
+    .score-tracker {
+      padding-left: 0px;
+      font-size: 24px;
+    }
+
+    .your-moves th {
+        border-left: solid #fff000 1px;
+        border-top: solid #fff000 1px;
+        padding: 10px;
+        height: 25px;
+        width: 50px;
+    }
+
+    .your-moves tbody {
+      background-color: #393D44;
+      width: 50px;
+    }
+
+    .tracker tr {
+      font-size: 10px;
+      border-left: solid #fff000 1px;
+      border-top: solid #fff000 1px;
+    }
+
+    .tracker tbody {
+      background-color: #393D44;
+    }
+
+    table {
+        border: solid #fff000 1px;
+        -moz-border-radius:6px;
+        border-radius: 15px;
+
+        border-collapse:separate;
+        border-radius:6px;
+    }
+
+    td {
+        border-left:solid #FFF000 1px;
+        border-top:solid #393d44 1px;
+        padding: 10px;
+        width: 100px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #fff000;
+        border-top: none;
+        width: 100px;
+        text-align: center;
+        text-decoration: overline underline;
+        font-size: 25px;
+    }
+
+    .container {
+      padding-left: 40px;
+    }
+    /*
+    /*
+    td:first-child, th:first-child {
+         border-left: none;
+    }
+
+    */
+
+
+
+
+
+
+
+
+    /*
+              .hi-icon-effect-8 .hi-icon:after {
+              	top: 0;
+              	left: 0;
+              	padding: 0;
+              	z-index: -1;
+              	box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+              	opacity: 0;
+              	-webkit-transform: scale(0.9);
+              	-moz-transform: scale(0.9);
+              	-ms-transform: scale(0.9);
+              	transform: scale(0.9);
+              }
+
+              .hi-icon-effect-8 .hi-icon:hover {
+              	background: rgba(255,255,255,0.05);
+              	-webkit-transform: scale(0.93);
+              	-moz-transform: scale(0.93);
+              	-ms-transform: scale(0.93);
+              	transform: scale(0.93);
+              	color: #fff;
+              }
+
+              .hi-icon-effect-8 .hi-icon:hover:after {
+              	-webkit-animation: sonarEffect 1.3s ease-out 75ms;
+              	-moz-animation: sonarEffect 1.3s ease-out 75ms;
+              	animation: sonarEffect 1.3s ease-out 75ms;
+              }
+              */
+
+              @-webkit-keyframes sonarEffect {
+              	0% {
+              		opacity: 0.3;
+              	}
+              	40% {
+              		opacity: 0.5;
+              		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+              	}
+              	100% {
+              		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+              		-webkit-transform: scale(1.5);
+              		opacity: 0;
+              	}
+              }
+              @-moz-keyframes sonarEffect {
+              	0% {
+              		opacity: 0.3;
+              	}
+              	40% {
+              		opacity: 0.5;
+              		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+              	}
+              	100% {
+              		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+              		-moz-transform: scale(1.5);
+              		opacity: 0;
+              	}
+              }
+              @keyframes sonarEffect {
+              	0% {
+              		opacity: 0.3;
+              	}
+              	40% {
+              		opacity: 0.5;
+              		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+              	}
+              	100% {
+              		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
+              		transform: scale(1.5);
+              		opacity: 0;
+              	}
+              }
+
+
+
+
+
+
+
+    /*Custom CSS for the buttons
+    .button {
+      padding: 15px 25px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px #999;
+    }
+
+    .button:hover {
+      background-color: #3e8e41;
+    }
+
+    .button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    /* Pulse Grow
+    @-webkit-keyframes hvr-pulse-grow {
+      to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+    @keyframes hvr-pulse-grow {
+      to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+    .hvr-pulse-grow {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+
+    }
+    .hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+      -webkit-animation-name: hvr-pulse-grow;
+      animation-name: hvr-pulse-grow;
+      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.3s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+    }
+    */

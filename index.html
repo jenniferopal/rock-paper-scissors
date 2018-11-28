@@ -1,0 +1,98 @@
+			<!DOCTYPE html>
+			<html lang="en-GB">
+			<head>
+				<title>Rock Paper Scissors</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<meta charset="utf-8" />
+				<link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+				<link rel="stylesheet" href="css\style.css"/>
+			</head>
+			<body>
+
+					<!--Game Title-->
+				<div class="game-title">
+					<span class="first-word">Rock</span>
+					<span class="last-words">Paper Scissors</span>
+				</div>
+				<section class="content">
+					<!--Buttons-->
+					<div class="wrapper">
+		<button id="rock" value="rock">
+			<i class="fa fa-hand-grab-o">
+			</i>
+		</button>
+
+					<button id="paper" value="paper">
+						<i class="fa fa-hand-paper-o"></i>
+					</button>
+
+					<button id="scissors" value="scissors">
+						<i class="fa fa-hand-spock-o">
+						</i>
+					</button>
+				</div>
+
+				<!--Result-->
+				<div class="container">
+					<div class="result">
+				<table>
+					<thead>
+						<tr>
+							<th>YOUR RESULT</th>
+						</tr>
+					</thead>
+						<tbody>
+							<tr>
+								<td><span id="verdict">0</span></td>
+				</tr>
+			</tbody>
+				</table>
+			</div>
+</div>
+				<!--Current Game-->
+				<div class="container">
+				<table class="your-moves">
+					<thead>
+						<tr>
+							<th>YOU</th>
+							<th>CPU</th>
+						</tr>
+					</thead>
+					<tbody>
+							<tr>
+							<td><p><span id="play_you">0</span></p></td>
+							<td><p><span id="play_machine">0</span></p></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="tracker">
+					<thead>
+						<tr>
+							<th>WINS</th>
+							<th>LOSSES</th>
+							<th>TIES</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><p class="score-tracker"><span id="game_won">0</span></p></td>
+							<td><p class="score-tracker"><span id="game_lost">0</span></p></td>
+							<td><p class="score-tracker"><span id="game_draw">0</span></p></td>
+						</tr>
+					</tbody>
+				</table>
+				<div>
+
+			</section><!-- .content -->
+
+			<!--Tally-->
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+			<script src="js/engine.js"></script>
+
+			</body>
+			</html>
